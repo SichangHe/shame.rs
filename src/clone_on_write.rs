@@ -8,15 +8,10 @@ use super::*;
 ///
 /// Since weak reference handling is not implemented,
 /// circular references should be avoided because they cause memory leaks.
-#[derive(Debug, Default, Eq, Ord, PartialEq, PartialOrd)]
+#[derive(Debug, Default, Eq, Hash, Ord, PartialEq, PartialOrd)]
+#[derive_where(Clone)]
 pub struct CW<T> {
     inner: Arc<T>,
-}
-
-impl<T> Clone for CW<T> {
-    fn clone(&self) -> Self {
-        self.inner.clone().into()
-    }
 }
 
 impl<T: Clone> CW<T> {

@@ -1,3 +1,11 @@
+[workspace]
+members = []
+
+[workspace.dependencies]
+derive-where = "1"
+impls = "1"
+pub-fields = "0.1"
+
 [package]
 name = "shame"
 version = "0.1.0"
@@ -6,5 +14,8 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-derive-where = "1"
-pub-fields = "0.1"
+derive-where.workspace = true
+pub-fields.workspace = true
+
+[dev-dependencies]
+impls.workspace = true

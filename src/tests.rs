@@ -1,5 +1,7 @@
 use super::*;
 
+use impls::impls;
+
 #[test]
 fn intos() {
     let val = "Random String".to_owned();
@@ -29,6 +31,7 @@ fn clone() {
     #[derive(Debug, Eq, PartialEq)]
     struct NotClone;
 
+    assert!(impls!(CW<NotClone>: Clone));
     let cw: CW<_> = NotClone.into();
     let cw_clone = cw.clone();
     assert_eq!(cw_clone, cw)

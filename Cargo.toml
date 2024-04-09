@@ -1,5 +1,5 @@
 [workspace]
-members = []
+members = ["derive_everything"]
 
 [workspace.dependencies]
 derive-where = "1"
@@ -15,6 +15,9 @@ repository = "https://github.com/SichangHe/shame.rs"
 name = "shame"
 version = "0.0.0"
 edition = "2021"
+description.workspace = true
+license.workspace = true
+repository.workspace = true
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

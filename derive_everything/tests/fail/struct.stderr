@@ -1,0 +1,64 @@
+error[E0277]: the trait bound `f64: Eq` is not satisfied
+ --> tests/fail/struct.rs:4:15
+  |
+3 | #[derive_everything]
+  | -------------------- in this procedural macro expansion
+4 | struct NotOrd(f64);
+  |               ^^^ the trait `Eq` is not implemented for `f64`
+  |
+  = help: the following other types implement trait `Eq`:
+            isize
+            i8
+            i16
+            i32
+            i64
+            i128
+            usize
+            u8
+          and $N others
+note: required by a bound in `AssertParamIsEq`
+ --> $RUST/core/src/cmp.rs
+  |
+  | pub struct AssertParamIsEq<T: Eq + ?Sized> {
+  |                               ^^ required by this bound in `AssertParamIsEq`
+  = note: this error originates in the derive macro `Eq` which comes from the expansion of the attribute macro `derive_everything` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0277]: the trait bound `f64: Hash` is not satisfied
+ --> tests/fail/struct.rs:4:15
+  |
+3 | #[derive_everything]
+  | -------------------- in this procedural macro expansion
+4 | struct NotOrd(f64);
+  |               ^^^ the trait `Hash` is not implemented for `f64`
+  |
+  = help: the following other types implement trait `Hash`:
+            isize
+            i8
+            i16
+            i32
+            i64
+            i128
+            usize
+            u8
+          and $N others
+  = note: this error originates in the derive macro `Hash` which comes from the expansion of the attribute macro `derive_everything` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0277]: the trait bound `f64: Ord` is not satisfied
+ --> tests/fail/struct.rs:4:15
+  |
+3 | #[derive_everything]
+  | -------------------- in this procedural macro expansion
+4 | struct NotOrd(f64);
+  |               ^^^ the trait `Ord` is not implemented for `f64`
+  |
+  = help: the following other types implement trait `Ord`:
+            isize
+            i8
+            i16
+            i32
+            i64
+            i128
+            usize
+            u8
+          and $N others
+  = note: this error originates in the derive macro `Ord` which comes from the expansion of the attribute macro `derive_everything` (in Nightly builds, run with -Z macro-backtrace for more info)

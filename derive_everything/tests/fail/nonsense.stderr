@@ -1,0 +1,19 @@
+error[E0774]: `derive` may only be applied to `struct`s, `enum`s and `union`s
+ --> tests/fail/nonsense.rs:3:1
+  |
+3 | #[derive_everything]
+  | ^^^^^^^^^^^^^^^^^^^^ not applicable here
+4 | fn noop() {}
+  | ------------ not a `struct`, `enum` or `union`
+  |
+  = note: this error originates in the attribute macro `derive_everything` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0774]: `derive` may only be applied to `struct`s, `enum`s and `union`s
+ --> tests/fail/nonsense.rs:6:1
+  |
+6 | #[derive_everything]
+  | ^^^^^^^^^^^^^^^^^^^^ not applicable here
+7 | trait Trait {}
+  | -------------- not a `struct`, `enum` or `union`
+  |
+  = note: this error originates in the attribute macro `derive_everything` (in Nightly builds, run with -Z macro-backtrace for more info)

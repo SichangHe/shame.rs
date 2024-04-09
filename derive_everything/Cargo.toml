@@ -2,7 +2,7 @@
 name = "derive_everything"
 version = "0.1.0"
 edition = "2021"
-description = "#[derive(Copy, Clone, Debug, Default, Eq, Hash, Ord, PartialEq, PartialOrd)] everything if possible."
+description = "#[derive(Clone, Debug, Default, Eq, Hash, Ord, PartialEq, PartialOrd)] everything if possible."
 license.workspace = true
 repository.workspace = true
 
@@ -11,10 +11,13 @@ repository.workspace = true
 [lib]
 proc-macro = true
 
+[[test]]
+name = "tests"
+path = "tests/progress.rs"
+
 [dev-dependencies]
 trybuild = { version = "1", features = ["diff"] }
 
 [dependencies]
-impls.workspace = true
 quote = "1"
 syn = { version = "2", features = ["full"] }

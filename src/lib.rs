@@ -4,6 +4,7 @@ use std::{
     sync::Arc,
 };
 
+pub use derive_everything::*;
 pub use derive_where::derive_where;
 pub use pub_fields::pub_fields;
 

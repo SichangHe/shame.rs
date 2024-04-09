@@ -18,7 +18,7 @@ jobs:
           key: rust-${{ hashFiles('route_verification/Cargo.lock') }}
       - uses: mozilla-actions/sccache-action@v0.0.3
       - run: |
-          cargo test --workspace
+          TRYBUILD=overwrite cargo test --workspace
           RUSTFLAGS="-Dwarnings" cargo clippy --workspace
           cargo fmt -- --check
         env:

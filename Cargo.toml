@@ -17,7 +17,7 @@ repository = "https://github.com/SichangHe/shame.rs"
 
 [package]
 name = "shame"
-version = "0.0.1"
+version = "0.0.2"
 edition = "2021"
 description.workspace = true
 license.workspace = true

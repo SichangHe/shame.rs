@@ -1,16 +1,19 @@
 #![doc = include_str!("../README.md")]
 use std::{
+    io::stderr,
     ops::{Deref, DerefMut},
     sync::Arc,
 };
 
-pub use derive_everything::*;
-pub use derive_where::derive_where;
-pub use pub_fields::pub_fields;
+pub use derive_everything;
+pub use derive_where;
+pub use pub_fields;
 
 pub mod clone_on_write;
 
-pub use clone_on_write::CW;
+pub use anyhow;
+pub use tracing;
+pub use tracing_subscriber;
+use tracing_subscriber::EnvFilter;
 
-#[cfg(test)]
-mod tests;
+pub mod prelude;

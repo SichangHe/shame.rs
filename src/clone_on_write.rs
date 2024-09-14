@@ -1,4 +1,4 @@
-use super::*;
+use super::{prelude::*, *};
 
 /// Owned clone-on-write convenience smart pointer.
 /// Cloning a `CW` only clones the [`Arc`] it wraps, not the inner value.
@@ -63,3 +63,6 @@ impl<T> From<CW<T>> for Arc<T> {
         val.inner
     }
 }
+
+#[cfg(test)]
+mod tests;

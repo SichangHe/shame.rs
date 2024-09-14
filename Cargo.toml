@@ -7,6 +7,8 @@ derive-where = "1"
 derive_everything = { version = "0.1", path = "derive_everything" }
 impls = "1"
 pub-fields = "0.1"
+regex = "1"
+thiserror = "1"
 tracing = "0.1"
 tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 
@@ -30,6 +32,8 @@ anyhow.workspace = true
 derive-where.workspace = true
 derive_everything.workspace = true
 pub-fields.workspace = true
+regex.workspace = true
+thiserror.workspace = true
 tracing.workspace = true
 tracing-subscriber.workspace = true
 

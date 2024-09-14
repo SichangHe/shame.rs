@@ -13,7 +13,7 @@ tracing = "0.1"
 tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 
 [workspace.package]
-description = "Convenience Rust utilities for when you don't care much about performance."
+description = "Commonly used utilities to trade performance and compilation time for development velocity."
 license = "MIT"
 repository = "https://github.com/SichangHe/shame.rs"
 

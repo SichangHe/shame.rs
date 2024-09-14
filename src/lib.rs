@@ -7,7 +7,6 @@ use std::{
 
 pub use derive_everything;
 pub use derive_where;
-pub use pub_fields;
 
 pub mod clone_on_write;
 
